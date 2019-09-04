@@ -1,0 +1,23 @@
+<div class="jumbotron">
+    <h1>Products Page</h1>
+        As the genome data that we study to potentially save lives grows at massive scale—our institute alone generating roughly 12 terabytes of data daily—human genomics is becoming increasingly reliant on the technology tools we use for computation and storage. Google Cloud allows us to conduct transformative research more rapidly and securely. This speed and security are foundational for scientific discovery today.
+
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" style="height:200px;background:teal"></div>
+    <div class="col-md-6" style="height:200px;background:purple"></div>
+    <div class="col-md-3" style="height:200px;background:green"></div>
+    <div class="col-md-3" style="height:200px;background:magenta"></div>
+    <div class="col-md-3" style="height:200px;background:midnightblue"></div>
+    <div class="col-md-3" style="height:200px;background:olive"></div>
+
+</div>
+
+<button>Submit</button>
+
+<button class="btn btn-success">Submit</button>
+<button class="btn btn-warning">Submit</button>
+<button class="btn btn-danger">Submit</button>
+<button class="btn btn-info">Submit</button>
+<button class="btn btn-primary">Submit</button>
