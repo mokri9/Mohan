@@ -1,0 +1,308 @@
+Angular 8
+API =>: Node, Springboot, Python, .net
+forms
+Testing
+------------------
+Nginx
+Docker
+------------------
+GitHub
+
+------------------
+HTML
+CSS
+JavaScript
+BootStrap
+-----------------
+JSON - JavaScript Object Notation
+
+[
+    {
+        name: "John",
+        class:"UI"
+    },
+    {
+        name: "Alis",
+        class:"UI"
+    }
+]
+
+
+package.JSON -- first file in our application - contains - starting point, description, name of JSON etc
+
+/****************************
+Steps to create package.JSON
+****************************/
+> goto the folder using package.JSON - using cmd/terminal
+ > npm init
+  > answer all questions
+    > yes
+
+
+
+Local package  => local to the folder
+Global package => local to the system/computer
+
+packages for setup and run - will be in global package, all other that are used for development should be installed locally
+/**********************
+   Steps to instal local package
+    > npm install zone.js / npm i zone.js /npm install zone.js --save (--save is used for node version below 6, not now)
+
+   *********************/
+
+
+--- node_modules folder is the heaviest of all in the application - it is difficult to transer this folder, 
+
+
+Steps to setup Angular
+
+---------------
+for mac  - fgo to terminal
+
+
+for windows 
+> run as administrator
+ > npm i -g @angular/cli   --- we have to install globally
+
+ > goto the folder using cmd/terminal
+  > ng new firstapp
+    > type 'Y'
+
+     > cd firstapp   
+       > npm start /ng serve
+          > got o browser type http://localhost:4200
+
+
+
+
+
+ ----------------------------
+
+ command to starting
+ npm start
+ ng serve -- actual command to start the angular application
+
+
+
+
+
+Note: actual command to start the application is ng serve
+
+If i want to run the application on different port no.
+
+ng serve --port 6700  ---- to change the default port no from 4200 to 6700
+
+
+/****************************
+Flow of application
+****************************/
+
+=> npm start => angular.json  (ngserve is defined to run angular.json) => main.ts => Main Module => Main component
+=> index.html
+
+by the time execution is in Main module from main.ts, the ng serv will complie the code,
+
+after that when we call the localhost in the browser, the control will be in 
+index.html - where the page loads the data and displays it
+
+
+npm start will first look for angular.json (ng serve complier by default looks for angular.json)
+
+----- App Folder is the main folder in which the complete application will be written
+
+except html and css, all files in the main folder (i.e. App folder) all are .ts extension
+
+/****************************
+Different files in angular app
+****************************/
+> Module => Information of all the files
+> component => contains all html, css, logic
+
+** One main module  && one main component - which acts like an entry point to the application
+
+> Pipe/Filter  => run time data change/ run time logic
+> Service => Dependency Injection/ Call External API
+> Routing => For route the pages
+
+-- every file will have these 3 sections
+a) import
+b) //decorator
+c) Export
+
+
+In package.json - @angular/core : 8.0.1 - is the core package for angular
+and also @angular/platform-browser : 8.0.1
+
+Every file has different import statments
+
+Module => NgModule must be imported
+Component => Component
+Pipe => Pipe, PipeTransform
+Service => Injectable
+
+
+For Module file:
+
+import {NgModule} from '@angular/core'
+
+//decorator
+@NgModule({
+
+  //All the module will be declare are
+    imports: [],
+
+    //All the component & PipeTransform
+    declarations: [],
+
+    //Only first component
+    bootstrap: [],
+
+    //All Services
+    providers: []
+
+
+})
+
+export class AppModule {
+
+}
+
+
+
+FOr Component file:
+
+import{ Component} from '@angular/core'
+
+@Component ({
+
+    selector: 'app-root',
+    template: '<h1> this is angluar app '
+
+})
+
+export class AppComponent {
+
+}
+
+
+
+
+/*************************
+Component Flow (first)
+**************/
+
+=> Create a Component  
+   => Declare component using class name in AppModule 
+   in declaration as well as bootstrap array
+     => Put selector name in index.html
+
+
+     /*************************
+Component Flow (second)
+**************/
+
+=> Create a Component  
+   => Declare component using class name in AppModule 
+   in just declaration array
+     => Put selector name in main component
+
+
+
+/***********************
+BootStrap 3 tags  - from w3schools.com
+************/
+
+Grid
+Table
+Alert
+Button
+Pannel
+Glyphicons
+Navbar
+Input
+Forms
+
+
+
+Data types
+
+String
+Number
+Boolean
+Any
+
+
+
+/********************
+Binding in HTML 
+********************/
+
+One way Binding
+ > Data Binding  {{}}
+ > Property Binding  []
+ > Event Binding  ()
+Two way Binding  [()]
+
+
+
+/************************
+Structural Directive
+************************/
+
+*ngFor = like for loop
+*ngIf = Like if else
+
+
+
+/************************
+Inbuilt Pipes  -- Pipes do run time data change
+************************/
+
+uppercase
+lowercase
+titelcase
+currency
+date
+percentage
+
+
+/*********************
+TypeScript
+*********************/
+function add(a,b)
+{
+  return a+b;
+}
+
+this can also be rewritten now as:
+
+const add = (a,b) => {return a+b}
+
+this is called as arrow function
+
+
+
+var ages ={22,32,18,11,40}
+ages.filter((age)=> {return age>=18});
+
+
+var marks = [21,34,24, 56];
+marks.map(math.sqrt);
+
+var a = [0,1,2,3,4]
+marks.map((a)=> {return a*2});
+0,2,4,6,8
+
+marks.filter((a)=>{return a*2});
+1,2,3,4
+
+filter will return only the condition for which the value is true
+
+var city = ['london','newyork','delhi']
+city.indexOf('delhi')
+2
+city.indexOf('newyork')
+1
+city.indexOf('helsinki')
+-1
+
